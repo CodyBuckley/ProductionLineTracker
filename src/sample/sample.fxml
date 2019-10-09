@@ -74,7 +74,7 @@
                                         </AnchorPane>
                                     </children>
                                 </GridPane>
-                                <TableView layoutX="136.0" layoutY="165.0" prefHeight="140.0" prefWidth="358.0">
+                                <TableView layoutX="136.0" layoutY="165.0" prefHeight="175.0" prefWidth="350.0">
                                     <columns>
                                         <TableColumn prefWidth="146.3333740234375" text="Product Name" />
                                         <TableColumn prefWidth="118.6666259765625" text="Manufacturer" />
