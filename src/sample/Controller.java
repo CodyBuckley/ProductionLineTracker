@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -28,13 +30,14 @@ public class Controller {
   @FXML private Button btnAddProduct;
   @FXML private Button btnRecordProduction;
 
-  @FXML private ChoiceBox<String> cbItemType;
+  @FXML private ChoiceBox<ItemType> cbItemType;
 
   @FXML private ComboBox<String> cboChooseQuantity;
 
   /**
-   * Initialize method that implements cboChooseQuantity and populates the values 1 through 10
-   * inside the Combo Box.
+   * Initialize method that implements cboChooseQuantity to populate the values 1 through 10 inside
+   * the Combo Box and cbItemTypes to populate the values from Enum ItemType.java inside the Choice
+   * Box
    */
   @FXML
   private void initialize() {
@@ -44,6 +47,10 @@ public class Controller {
     cboChooseQuantity.getItems().addAll("1", "2", "3", "4", "5", "6", "7", "8", "9", "10");
     cboChooseQuantity.setEditable(true);
     cboChooseQuantity.getSelectionModel().selectFirst();
+
+    // ChoiceBox cbItemType is filled with values from Enum
+    // Allow users to select 4 options: Audio, Visual, Audio-Mobile, Visual-Mobile
+    cbItemType.getItems().setAll(ItemType.values());
   }
 
   /**
@@ -53,46 +60,22 @@ public class Controller {
    *
    * @param event handles when the button is pressed
    */
-  public void addProduct(ActionEvent event) {
+  public void addProduct(ActionEvent event) throws SQLException {
 
-    // Driver and URL pointing to Database
-    final String JDBC_DRIVER = "org.h2.Driver";
-    final String DB_URL = "jdbc:h2:./res/production";
+    Statement stmt = Main.connectDB();
+    ItemType code = cbItemType.getValue();
 
-    //  Database credentials
-    final String USER = "";
-    final String PASS = "";
-
-    Connection conn = null;
-    Statement stmt = null;
-
-    try {
-      // Register Java Database driver
-      Class.forName(JDBC_DRIVER);
-
-      // Open a connection
-      conn = DriverManager.getConnection(DB_URL, USER, PASS);
-
-      // Execute a query
-      stmt = conn.createStatement();
-
-      // Example sql to insert fields into Product Table on the Database
-      String sql =
-          "INSERT INTO Product(type, manufacturer, name) VALUES ( 'AUDIO', 'Apple', 'iPod' )";
-      stmt.executeUpdate(sql);
-
-      // Clean-up environment
-      stmt.close();
-      conn.close();
-
-      // Exception to catch an error to find the class path
-    } catch (ClassNotFoundException e) {
-      e.printStackTrace();
-
-      // Exception to provide information on a database access error
-    } catch (SQLException e) {
-      e.printStackTrace();
-    }
+    // Example sql to insert fields into Product Table on the Database
+    String sql =
+        "INSERT INTO Product(type, manufacturer, name) VALUES ('"
+            + code.getCode()
+            + "', '"
+            + txtManufacturer.getText()
+            + "', '"
+            + txtProductName.getText()
+            + "');";
+    //System.out.println(sql);
+    stmt.executeUpdate(sql);
   }
 
   /**
