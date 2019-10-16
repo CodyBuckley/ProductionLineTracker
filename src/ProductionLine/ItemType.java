@@ -1,4 +1,4 @@
-package sample;
+package ProductionLine;
 
 /**
  * An Enum called itemType that will items will have a pre-set type. Currently there are 4 types:

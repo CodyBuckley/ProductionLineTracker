@@ -1,20 +1,13 @@
-package sample;
+package ProductionLine;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Date;
 
-import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.ComboBox;
-
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class Controller {
 
@@ -35,6 +28,8 @@ public class Controller {
 
   @FXML private ComboBox<String> cboChooseQuantity;
 
+  @FXML private TextArea taProductionLog;
+
   /**
    * Initialize method that implements cboChooseQuantity to populate the values 1 through 10 inside
    * the Combo Box and cbItemTypes to populate the values from Enum ItemType.java inside the Choice
@@ -53,6 +48,11 @@ public class Controller {
     // ChoiceBox cbItemType is filled with values from Enum
     // Allow users to select 4 options: Audio, Visual, Audio-Mobile, Visual-Mobile
     cbItemType.getItems().setAll(ItemType.values());
+
+    // Text Area taProductionLog is filled with a test constructor
+    // Displays Production Number, Product ID, Serial Number, and the Date logged
+    ProductionRecord pr = new ProductionRecord(0, 3, "1", new Date());
+    taProductionLog.setText(pr.toString());
   }
 
   /**

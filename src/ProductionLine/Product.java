@@ -1,4 +1,4 @@
-package sample;
+package ProductionLine;
 
 /**
  * Create an abstract type called Product that will implement the Item interface. Product will

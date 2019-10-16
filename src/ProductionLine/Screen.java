@@ -1,4 +1,4 @@
-package sample;
+package ProductionLine;
 
 public class Screen implements ScreenSpec {
 

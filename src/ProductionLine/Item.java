@@ -1,4 +1,4 @@
-package sample;
+package ProductionLine;
 
 public interface Item {
 

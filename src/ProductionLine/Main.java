@@ -1,4 +1,4 @@
-package sample;
+package ProductionLine;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -29,7 +28,7 @@ public class Main extends Application {
   public void start(Stage primaryStage) throws Exception {
     connectDB();
 
-    Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
+    Parent root = FXMLLoader.load(getClass().getResource("ProductionTabs.fxml"));
     primaryStage.setTitle("Hello World");
     primaryStage.setScene(new Scene(root, 500, 375));
     primaryStage.show();

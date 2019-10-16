@@ -1,4 +1,4 @@
-package sample;
+package ProductionLine;
 
 public class MoviePlayer extends Product implements MultimediaControl {
 
