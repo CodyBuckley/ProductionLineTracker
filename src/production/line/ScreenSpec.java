@@ -1,4 +1,4 @@
-package ProductionLine;
+package production.line;
 
 /**
  * Create an interface called ScreenSpec. This will define 3 methods for the resolution, refresh

@@ -1,4 +1,4 @@
-package ProductionLine;
+package production.line;
 
 /**
  * All of the items on this production line will have basic media controls. Create an interface

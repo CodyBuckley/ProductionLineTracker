@@ -1,14 +1,14 @@
-package ProductionLine;
+package production.line;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.Statement;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
 
 /**
  * Production Line Tracker with a GUI and database. Software for a media player production facility
@@ -37,6 +37,8 @@ public class Main extends Application {
   public static Statement connectDB() {
 
     // Driver and URL pointing to Database
+    // Google CheckStyle suggests that JDBC_DRIVER, DB_URL, USER, and PASS
+    // Should not have 2 consecutive capital letters
     final String JDBC_DRIVER = "org.h2.Driver";
     final String DB_URL = "jdbc:h2:./res/production";
 

@@ -1,4 +1,4 @@
-package ProductionLine;
+package production.line;
 
 /**
  * An Enum called itemType that will items will have a pre-set type. Currently there are 4 types:
@@ -19,7 +19,7 @@ public enum ItemType {
     this.code = code;
   }
 
-  public String getCode(){
-      return code;
+  public String getCode() {
+    return code;
   }
 }

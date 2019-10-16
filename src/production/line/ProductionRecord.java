@@ -1,4 +1,4 @@
-package ProductionLine;
+package production.line;
 
 import java.util.Date;
 
@@ -34,11 +34,11 @@ public class ProductionRecord {
   }
 
   public void setDateProduced(Date dateProduced) {
-    this.dateProduced = dateProduced;
+    this.dateProduced = new Date(dateProduced.getTime());
   }
 
   public Date getDateProduced() {
-    return dateProduced;
+    return new Date(dateProduced.getTime());
   }
 
   public ProductionRecord(int productID) {
@@ -52,7 +52,7 @@ public class ProductionRecord {
     this.productionNumber = productionNumber;
     this.productID = productID;
     this.serialNumber = serialNumber;
-    this.dateProduced = new Date();
+    this.dateProduced = new Date(dateProduced.getTime());
   }
 
   public String toString() {

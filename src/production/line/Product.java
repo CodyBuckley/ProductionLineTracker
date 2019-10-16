@@ -1,4 +1,4 @@
-package ProductionLine;
+package production.line;
 
 /**
  * Create an abstract type called Product that will implement the Item interface. Product will
@@ -54,8 +54,8 @@ public abstract class Product implements Item {
 }
 
 // To test the Product class, temporarily create a Widget class that extends Product.
-class Widget extends Product {
-  public Widget(String itemName, String manufacturerName, String type) {
-    super(itemName, manufacturerName, type);
-  }
-}
+// class Widget extends Product {
+//  public Widget(String itemName, String manufacturerName, String type) {
+//    super(itemName, manufacturerName, type);
+//  }
+// }
