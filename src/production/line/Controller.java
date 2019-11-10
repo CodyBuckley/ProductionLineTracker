@@ -68,7 +68,7 @@ public class Controller {
    *
    * @return null because the method is only trying to start the database
    */
-  public static Statement connectDB() {
+  private static Statement connectDB() {
 
     // Driver and URL pointing to Database
     // Google CheckStyle suggests that JDBC_DRIVER, DB_URL, USER, and PASS
@@ -81,7 +81,7 @@ public class Controller {
     final String PASS = "";
 
     Connection conn;
-    Statement stmt = null;
+    Statement stmt;
 
     try {
       // Register Java Database driver
