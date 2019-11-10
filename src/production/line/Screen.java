@@ -7,8 +7,14 @@ public class Screen implements ScreenSpec {
   private int refreshRate;
   private int responseTime;
 
-  // Constructor Screen that pulls in the specifications for the screen and set the values into
-  // String resolution, int refreshRate, and int responseTime.
+  /**
+   * Constructor Screen that pulls in the specifications for the screen and set the values into
+   * String resolution, int refreshRate, and int responseTime.
+   *
+   * @param resolution the screen's resolution for visual products
+   * @param refreshRate the screen's refresh rate for visual products
+   * @param responseTime the screen's response time for visual products
+   */
   public Screen(String resolution, int refreshRate, int responseTime) {
     this.resolution = resolution;
     this.refreshRate = refreshRate;

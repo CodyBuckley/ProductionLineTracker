@@ -10,8 +10,15 @@ public class AudioPlayer extends Product implements MultimediaControl {
   private String supportedAudioFormats;
   private String supportedPlaylistFormats;
 
-  // Create a constructor that will take in 4 parameters:
-  // name, manufacturer, supportedAudioFormats, and supportedPlaylistFormats.
+  /**
+   * Create a constructor that will take in 4 parameters: name, manufacturer, supportedAudioFormats,
+   * and supportedPlaylistFormats.
+   *
+   * @param name the name of the product
+   * @param manufacturer the name of the manufacturer
+   * @param supportedAudioFormats the name of supported audio players
+   * @param supportedPlaylistFormats the name of supported playlist for the audio players
+   */
   public AudioPlayer(
       String name,
       String manufacturer,
@@ -19,7 +26,7 @@ public class AudioPlayer extends Product implements MultimediaControl {
       String supportedPlaylistFormats) {
 
     // Call the parent constructor and default to Audio for type
-    super(name, manufacturer, "AUDIO");
+    super(name, manufacturer, ItemType.AUDIO);
 
     // Initialize the two fields inside the constructor
     this.supportedAudioFormats = supportedAudioFormats;
