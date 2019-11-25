@@ -65,11 +65,3 @@ public abstract class Product implements Item {
   }
 }
 
-// To test the Product class, temporarily create a Widget class that extends Product.
-// Google Check Style suggests to have its own source file, for purpose of project
-// the test object Widget will stay inside Product.java
-class Widget extends Product {
-  public Widget(String itemName, String manufacturerName, ItemType type) {
-    super(itemName, manufacturerName, type);
-  }
-}

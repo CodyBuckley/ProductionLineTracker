@@ -32,4 +32,23 @@ public class Main extends Application {
   public static void main(String[] args) {
     launch(args);
   }
+
+  /**
+   * To ensure that sensitive information is not leaked it is important that the information saved
+   * to file is encoded. To meet these regulations you need to add a method that will reverse the
+   * order of the text stored for the database password. This should be done recursively using a
+   * method named reverseString().
+   *
+   * @param pw the password stored for the Database log in.
+   * @return if the password is empty, it will return password. if not, it will reverse the string
+   *     by the character.
+   */
+  public String reverseString(String pw) {
+    if (pw.isEmpty()) {
+      return pw;
+    }
+
+    // Calling Function Recursively
+    return reverseString(pw.substring(1)) + pw.charAt(0);
+  }
 }
