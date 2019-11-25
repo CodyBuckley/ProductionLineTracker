@@ -98,11 +98,7 @@ public class Employee {
     final Matcher matcher = pattern.matcher(password);
 
     // If Statement to check and see if the supplied password matches the requirements.
-    if (matcher.find()) {
-      return true;
-    }
-
-    return false;
+    return matcher.find();
   }
 
   /**
