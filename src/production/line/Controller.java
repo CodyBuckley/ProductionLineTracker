@@ -223,6 +223,8 @@ public class Controller {
 
     // Set the items stored in the Observable List into table view.
     tableView.setItems(productLine);
+
+
   }
 
   /**

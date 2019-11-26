@@ -48,7 +48,7 @@
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                                             <children>
-                                                <TextField fx:id="txtProductName" layoutX="15.0" layoutY="5.0" prefHeight="25.0" prefWidth="250.0" />
+                                                <TextField fx:id="txtProductName" layoutX="14.0" layoutY="5.0" prefHeight="25.0" prefWidth="250.0" />
                                             </children>
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
@@ -58,26 +58,26 @@
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                             <children>
-                                                <TextField fx:id="txtManufacturer" layoutX="15.0" layoutY="4.0" prefHeight="25.0" prefWidth="250.0" />
+                                                <TextField fx:id="txtManufacturer" layoutX="14.0" layoutY="4.0" prefHeight="25.0" prefWidth="250.0" />
                                             </children>
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                                             <children>
-                                                <Label fx:id="lblItemType" layoutX="24.0" layoutY="11.0" text="Item Type" />
+                                                <Label fx:id="lblItemType" layoutX="14.0" layoutY="11.0" text="Item Type" />
                                             </children>
                                         </AnchorPane>
                                         <AnchorPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
                                             <children>
-                                                <ChoiceBox fx:id="cbItemType" layoutX="14.0" layoutY="6.0" prefHeight="25.0" prefWidth="250.0" />
+                                                <ChoiceBox fx:id="cbItemType" layoutX="14.0" layoutY="6.0" prefHeight="25.0" prefWidth="250.0" styleClass="label-field" />
                                             </children>
                                         </AnchorPane>
                                     </children>
                                 </GridPane>
                                 <TableView fx:id="tableView" layoutX="10.0" layoutY="127.0" prefHeight="220.0" prefWidth="490.0">
                                     <columns>
-                                        <TableColumn fx:id="productNameCol" prefWidth="146.3333740234375" text="Product Name" />
-                                        <TableColumn fx:id="manufacturerNameCol" prefWidth="118.6666259765625" text="Manufacturer" />
-                                        <TableColumn fx:id="itemTypeCol" prefWidth="92.6666259765625" text="Item Type" />
+                                        <TableColumn fx:id="productNameCol" prefWidth="190.0" styleClass="label-field" text="Product Name" />
+                                        <TableColumn fx:id="manufacturerNameCol" prefWidth="190.0" styleClass="label-field" text="Manufacturer" />
+                                        <TableColumn fx:id="itemTypeCol" prefWidth="109.0" styleClass="label-field" text="Item Type" />
                                     </columns>
                                 </TableView>
                                 <Button fx:id="btnAddProduct" layoutX="399.0" layoutY="38.0" mnemonicParsing="false" onAction="#addProduct" text="Add Product" />
@@ -115,7 +115,7 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="lblEmployeeName" layoutX="55.0" layoutY="47.0" prefHeight="24.0" prefWidth="109.0" text="Employee Full Name" />
+                        <Label fx:id="lblEmployeeName" layoutX="55.0" layoutY="47.0" prefHeight="25.0" prefWidth="120.0" text="Employee Full Name" />
                         <TextField fx:id="txtEmployeeName" layoutX="178.0" layoutY="46.0" prefHeight="25.0" prefWidth="155.0" />
                         <Button fx:id="btnEmployeeInfo" layoutX="338.0" layoutY="46.0" mnemonicParsing="false" onAction="#addEmployee" text="Add Employee Info" />
                         <TextArea fx:id="taEmployeeInfo" layoutX="55.0" layoutY="76.0" prefHeight="200.0" prefWidth="400.0" />

@@ -24,8 +24,11 @@ public class Main extends Application {
   @Override
   public void start(Stage primaryStage) throws Exception {
     Parent root = FXMLLoader.load(getClass().getResource("ProductionTabs.fxml"));
-    primaryStage.setTitle("Hello World");
-    primaryStage.setScene(new Scene(root, 500, 375));
+    Scene scene = new Scene(root, 500, 375);
+    primaryStage.setTitle("ObjectOriented-ProductionLine");
+    primaryStage.setScene(scene);
+    scene.getStylesheets().add("ProductionLineTracker.css");
+
     primaryStage.show();
   }
 
