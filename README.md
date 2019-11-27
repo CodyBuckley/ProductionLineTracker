@@ -83,7 +83,7 @@ For the first tab, we have Product Line. Product Line has three fields, two text
 filled the fields, you can press the "Add Product" button. This will store the created product into the Existing
 Products table.
 
-![Adding Product](ProductionLineTracker Release Candidate Adding Product.gif)
+![Adding Product](ProductionLineTracke_Release_Candidate_Adding_Product.gif)
 
 **Record Production to Log**
 
@@ -94,14 +94,14 @@ For the next two tabs, we have Record Production and Production Log.
    2.   Production Log: There is a Text Area to store the saved production information. This will show the production
    number, product name, the serial number, and the date it was recorded.
    
-![Production to Log](ProductionLineTracker Release Candidate Production to Log.gif)
+![Production to Log](ProductionLineTracker_Release_Candidate_Production_to_Log.gif)
 
 **Add Employees**
 
 For the final tab, we have Employee. This tab will have a text field for employees to insert their full name. Using this
 information and a provided password, when pressing the "Add Employee Info" button, it will generate a username and email.
 
-![Adding Employees](ProductionLineTracker Release Candidate Adding Employees.gif)
+![Adding Employees](ProductionLineTracker_Release_Candidate_Adding_Employees.gif)
 
 ## Documentation
 
