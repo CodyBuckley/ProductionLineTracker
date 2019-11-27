@@ -112,7 +112,7 @@ Here is the JavaDocs for the Project!
 ## Diagrams
 **Class Diagram**
 
-![Class Diagram](Package line.png)
+![Class Diagram](Package_line.png)
 
 **Database Diagram**
 
