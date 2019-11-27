@@ -333,8 +333,8 @@ public class Controller {
       // Set up Prepared Statement to update the PRODUCTIONRECORD table with values pulled from the
       // productionRun Array List.
       String sql =
-          "INSERT INTO PRODUCTIONRECORD(PRODUCTION_NUM, PRODUCT_ID, SERIAL_NUM, DATE_PRODUCED)"
-              + " VALUES (?,?,?,?)";
+          "INSERT INTO PRODUCTIONRECORD(PRODUCT_ID, SERIAL_NUM, DATE_PRODUCED)"
+              + " VALUES (?,?,?)";
       PreparedStatement ps = conn.prepareStatement(sql);
 
       // For loop to loop and set the ID from the PRODUCTIONRECORD table to get the name from the
@@ -342,10 +342,9 @@ public class Controller {
       // table.
       for (ProductionRecord pr : productionRun) {
         pr.setProductID(getProductId(pr.getProductName()));
-        ps.setInt(1, pr.getProductionNumber());
-        ps.setInt(2, pr.getProductID());
-        ps.setString(3, pr.getSerialNumber());
-        ps.setDate(4, new java.sql.Date(new java.util.Date().getTime()));
+        ps.setInt(1, pr.getProductID());
+        ps.setString(2, pr.getSerialNumber());
+        ps.setDate(3, new java.sql.Date(new java.util.Date().getTime()));
         ps.executeUpdate();
       }
 
