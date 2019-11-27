@@ -1,4 +1,4 @@
-# ObjectOriented_ProductionLine
+# ProductionLineTracker
 
 
 ##  Problem Statement
@@ -74,3 +74,62 @@ In addition to the ability to record production, the software also needs the abi
         -   Professor
 -   **Timelines** (a breakdown of the Product Backlog into time-bound smaller, more detailed tasks in Sprint Backlogs)
     -   Three 5-week sprints, detailed below.
+    
+## Demonstration
+
+**Adding Products**
+
+For the first tab, we have Product Line. Product Line has three fields, two text fields and a Choice Box. After you've
+filled the fields, you can press the "Add Product" button. This will store the created product into the Existing
+Products table.
+
+![Adding Product](ProductionLineTracker Release Candidate Adding Product.gif)
+
+**Record Production to Log**
+
+For the next two tabs, we have Record Production and Production Log. 
+   1.   Record Production:  There is a List View to select the stored products created in the Product Line tab. You can
+   use the Combo Box to select the number of the products to be produced. There is a button "Record Production" that 
+   will store that information into the Production Log tab.
+   2.   Production Log: There is a Text Area to store the saved production information. This will show the production
+   number, product name, the serial number, and the date it was recorded.
+   
+![Production to Log](ProductionLineTracker Release Candidate Production to Log.gif)
+
+**Add Employees**
+
+For the final tab, we have Employee. This tab will have a text field for employees to insert their full name. Using this
+information and a provided password, when pressing the "Add Employee Info" button, it will generate a username and email.
+
+![Adding Employees](ProductionLineTracker Release Candidate Adding Employees.gif)
+
+## Documentation
+
+Here is the JavaDocs for the Project!
+
+ [JavaDoc](https://codybuckley.github.io/ProductionLineTracker/)
+   
+## Diagrams
+**Class Diagram**
+
+![Class Diagram](Package line.png)
+
+**Database Diagram**
+
+![Database Diagram](production.png)
+    
+## Built With
+Developed and tested in IntelliJ for JavaFX
+
+GUI Design in Scenebuilder
+
+Used Oracle iLearning to review and reinforce key Java elements, such as:
+   -   Databases
+   -   Enums, Interfaces, Abstract classes
+   -   Inheritance
+   -   Polymorphism
+   -   Encapsulation
+   -   Array Lists
+
+## Author
+Cody Buckley

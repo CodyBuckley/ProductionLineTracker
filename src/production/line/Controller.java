@@ -122,6 +122,8 @@ public class Controller {
    */
   public void recordProduction() {
 
+    productionRun.clear();
+
     // For Loop that loops for as long as i is less than the chosen value from the combo box.
     // Continuously add the saved ProductionRecord object and increment the itemCount for the Text
     // Area.
